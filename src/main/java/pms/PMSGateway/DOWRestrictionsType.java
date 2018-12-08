@@ -1,0 +1,912 @@
+package pms.PMSGateway;
+
+import javax.xml.bind.annotation.*;
+
+
+/**
+ * <p>DOW_RestrictionsType complex type�� Java �ࡣ
+ * <p/>
+ * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p/>
+ * <pre>
+ * &lt;complexType name="DOW_RestrictionsType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="AvailableDaysOfWeek" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="ArrivalDaysOfWeek" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="DepartureDaysOfWeek" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="RequiredDaysOfWeek" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DOW_RestrictionsType", propOrder = {
+        "availableDaysOfWeek",
+        "arrivalDaysOfWeek",
+        "departureDaysOfWeek",
+        "requiredDaysOfWeek"
+})
+public class DOWRestrictionsType {
+
+    @XmlElement(name = "AvailableDaysOfWeek")
+    protected DOWRestrictionsType.AvailableDaysOfWeek availableDaysOfWeek;
+    @XmlElement(name = "ArrivalDaysOfWeek")
+    protected DOWRestrictionsType.ArrivalDaysOfWeek arrivalDaysOfWeek;
+    @XmlElement(name = "DepartureDaysOfWeek")
+    protected DOWRestrictionsType.DepartureDaysOfWeek departureDaysOfWeek;
+    @XmlElement(name = "RequiredDaysOfWeek")
+    protected DOWRestrictionsType.RequiredDaysOfWeek requiredDaysOfWeek;
+
+    /**
+     * ��ȡavailableDaysOfWeek���Ե�ֵ��
+     *
+     * @return possible object is
+     * {@link DOWRestrictionsType.AvailableDaysOfWeek }
+     */
+    public DOWRestrictionsType.AvailableDaysOfWeek getAvailableDaysOfWeek() {
+        return availableDaysOfWeek;
+    }
+
+    /**
+     * ����availableDaysOfWeek���Ե�ֵ��
+     *
+     * @param value allowed object is
+     *              {@link DOWRestrictionsType.AvailableDaysOfWeek }
+     */
+    public void setAvailableDaysOfWeek(DOWRestrictionsType.AvailableDaysOfWeek value) {
+        this.availableDaysOfWeek = value;
+    }
+
+    /**
+     * ��ȡarrivalDaysOfWeek���Ե�ֵ��
+     *
+     * @return possible object is
+     * {@link DOWRestrictionsType.ArrivalDaysOfWeek }
+     */
+    public DOWRestrictionsType.ArrivalDaysOfWeek getArrivalDaysOfWeek() {
+        return arrivalDaysOfWeek;
+    }
+
+    /**
+     * ����arrivalDaysOfWeek���Ե�ֵ��
+     *
+     * @param value allowed object is
+     *              {@link DOWRestrictionsType.ArrivalDaysOfWeek }
+     */
+    public void setArrivalDaysOfWeek(DOWRestrictionsType.ArrivalDaysOfWeek value) {
+        this.arrivalDaysOfWeek = value;
+    }
+
+    /**
+     * ��ȡdepartureDaysOfWeek���Ե�ֵ��
+     *
+     * @return possible object is
+     * {@link DOWRestrictionsType.DepartureDaysOfWeek }
+     */
+    public DOWRestrictionsType.DepartureDaysOfWeek getDepartureDaysOfWeek() {
+        return departureDaysOfWeek;
+    }
+
+    /**
+     * ����departureDaysOfWeek���Ե�ֵ��
+     *
+     * @param value allowed object is
+     *              {@link DOWRestrictionsType.DepartureDaysOfWeek }
+     */
+    public void setDepartureDaysOfWeek(DOWRestrictionsType.DepartureDaysOfWeek value) {
+        this.departureDaysOfWeek = value;
+    }
+
+    /**
+     * ��ȡrequiredDaysOfWeek���Ե�ֵ��
+     *
+     * @return possible object is
+     * {@link DOWRestrictionsType.RequiredDaysOfWeek }
+     */
+    public DOWRestrictionsType.RequiredDaysOfWeek getRequiredDaysOfWeek() {
+        return requiredDaysOfWeek;
+    }
+
+    /**
+     * ����requiredDaysOfWeek���Ե�ֵ��
+     *
+     * @param value allowed object is
+     *              {@link DOWRestrictionsType.RequiredDaysOfWeek }
+     */
+    public void setRequiredDaysOfWeek(DOWRestrictionsType.RequiredDaysOfWeek value) {
+        this.requiredDaysOfWeek = value;
+    }
+
+
+    /**
+     * <p>anonymous complex type�� Java �ࡣ
+     * <p/>
+     * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+     * <p/>
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class ArrivalDaysOfWeek {
+
+        @XmlAttribute(name = "Mon")
+        protected Boolean mon;
+        @XmlAttribute(name = "Tue")
+        protected Boolean tue;
+        @XmlAttribute(name = "Weds")
+        protected Boolean weds;
+        @XmlAttribute(name = "Thur")
+        protected Boolean thur;
+        @XmlAttribute(name = "Fri")
+        protected Boolean fri;
+        @XmlAttribute(name = "Sat")
+        protected Boolean sat;
+        @XmlAttribute(name = "Sun")
+        protected Boolean sun;
+
+        /**
+         * ��ȡmon���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isMon() {
+            return mon;
+        }
+
+        /**
+         * ����mon���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setMon(Boolean value) {
+            this.mon = value;
+        }
+
+        /**
+         * ��ȡtue���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isTue() {
+            return tue;
+        }
+
+        /**
+         * ����tue���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setTue(Boolean value) {
+            this.tue = value;
+        }
+
+        /**
+         * ��ȡweds���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isWeds() {
+            return weds;
+        }
+
+        /**
+         * ����weds���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setWeds(Boolean value) {
+            this.weds = value;
+        }
+
+        /**
+         * ��ȡthur���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isThur() {
+            return thur;
+        }
+
+        /**
+         * ����thur���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setThur(Boolean value) {
+            this.thur = value;
+        }
+
+        /**
+         * ��ȡfri���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isFri() {
+            return fri;
+        }
+
+        /**
+         * ����fri���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setFri(Boolean value) {
+            this.fri = value;
+        }
+
+        /**
+         * ��ȡsat���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSat() {
+            return sat;
+        }
+
+        /**
+         * ����sat���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSat(Boolean value) {
+            this.sat = value;
+        }
+
+        /**
+         * ��ȡsun���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSun() {
+            return sun;
+        }
+
+        /**
+         * ����sun���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSun(Boolean value) {
+            this.sun = value;
+        }
+
+    }
+
+
+    /**
+     * <p>anonymous complex type�� Java �ࡣ
+     * <p/>
+     * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+     * <p/>
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class AvailableDaysOfWeek {
+
+        @XmlAttribute(name = "Mon")
+        protected Boolean mon;
+        @XmlAttribute(name = "Tue")
+        protected Boolean tue;
+        @XmlAttribute(name = "Weds")
+        protected Boolean weds;
+        @XmlAttribute(name = "Thur")
+        protected Boolean thur;
+        @XmlAttribute(name = "Fri")
+        protected Boolean fri;
+        @XmlAttribute(name = "Sat")
+        protected Boolean sat;
+        @XmlAttribute(name = "Sun")
+        protected Boolean sun;
+
+        /**
+         * ��ȡmon���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isMon() {
+            return mon;
+        }
+
+        /**
+         * ����mon���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setMon(Boolean value) {
+            this.mon = value;
+        }
+
+        /**
+         * ��ȡtue���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isTue() {
+            return tue;
+        }
+
+        /**
+         * ����tue���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setTue(Boolean value) {
+            this.tue = value;
+        }
+
+        /**
+         * ��ȡweds���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isWeds() {
+            return weds;
+        }
+
+        /**
+         * ����weds���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setWeds(Boolean value) {
+            this.weds = value;
+        }
+
+        /**
+         * ��ȡthur���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isThur() {
+            return thur;
+        }
+
+        /**
+         * ����thur���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setThur(Boolean value) {
+            this.thur = value;
+        }
+
+        /**
+         * ��ȡfri���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isFri() {
+            return fri;
+        }
+
+        /**
+         * ����fri���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setFri(Boolean value) {
+            this.fri = value;
+        }
+
+        /**
+         * ��ȡsat���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSat() {
+            return sat;
+        }
+
+        /**
+         * ����sat���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSat(Boolean value) {
+            this.sat = value;
+        }
+
+        /**
+         * ��ȡsun���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSun() {
+            return sun;
+        }
+
+        /**
+         * ����sun���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSun(Boolean value) {
+            this.sun = value;
+        }
+
+    }
+
+
+    /**
+     * <p>anonymous complex type�� Java �ࡣ
+     * <p/>
+     * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+     * <p/>
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class DepartureDaysOfWeek {
+
+        @XmlAttribute(name = "Mon")
+        protected Boolean mon;
+        @XmlAttribute(name = "Tue")
+        protected Boolean tue;
+        @XmlAttribute(name = "Weds")
+        protected Boolean weds;
+        @XmlAttribute(name = "Thur")
+        protected Boolean thur;
+        @XmlAttribute(name = "Fri")
+        protected Boolean fri;
+        @XmlAttribute(name = "Sat")
+        protected Boolean sat;
+        @XmlAttribute(name = "Sun")
+        protected Boolean sun;
+
+        /**
+         * ��ȡmon���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isMon() {
+            return mon;
+        }
+
+        /**
+         * ����mon���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setMon(Boolean value) {
+            this.mon = value;
+        }
+
+        /**
+         * ��ȡtue���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isTue() {
+            return tue;
+        }
+
+        /**
+         * ����tue���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setTue(Boolean value) {
+            this.tue = value;
+        }
+
+        /**
+         * ��ȡweds���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isWeds() {
+            return weds;
+        }
+
+        /**
+         * ����weds���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setWeds(Boolean value) {
+            this.weds = value;
+        }
+
+        /**
+         * ��ȡthur���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isThur() {
+            return thur;
+        }
+
+        /**
+         * ����thur���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setThur(Boolean value) {
+            this.thur = value;
+        }
+
+        /**
+         * ��ȡfri���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isFri() {
+            return fri;
+        }
+
+        /**
+         * ����fri���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setFri(Boolean value) {
+            this.fri = value;
+        }
+
+        /**
+         * ��ȡsat���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSat() {
+            return sat;
+        }
+
+        /**
+         * ����sat���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSat(Boolean value) {
+            this.sat = value;
+        }
+
+        /**
+         * ��ȡsun���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSun() {
+            return sun;
+        }
+
+        /**
+         * ����sun���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSun(Boolean value) {
+            this.sun = value;
+        }
+
+    }
+
+
+    /**
+     * <p>anonymous complex type�� Java �ࡣ
+     * <p/>
+     * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+     * <p/>
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="Mon" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Tue" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Weds" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Thur" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Fri" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Sun" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class RequiredDaysOfWeek {
+
+        @XmlAttribute(name = "Mon")
+        protected Boolean mon;
+        @XmlAttribute(name = "Tue")
+        protected Boolean tue;
+        @XmlAttribute(name = "Weds")
+        protected Boolean weds;
+        @XmlAttribute(name = "Thur")
+        protected Boolean thur;
+        @XmlAttribute(name = "Fri")
+        protected Boolean fri;
+        @XmlAttribute(name = "Sat")
+        protected Boolean sat;
+        @XmlAttribute(name = "Sun")
+        protected Boolean sun;
+
+        /**
+         * ��ȡmon���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isMon() {
+            return mon;
+        }
+
+        /**
+         * ����mon���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setMon(Boolean value) {
+            this.mon = value;
+        }
+
+        /**
+         * ��ȡtue���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isTue() {
+            return tue;
+        }
+
+        /**
+         * ����tue���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setTue(Boolean value) {
+            this.tue = value;
+        }
+
+        /**
+         * ��ȡweds���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isWeds() {
+            return weds;
+        }
+
+        /**
+         * ����weds���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setWeds(Boolean value) {
+            this.weds = value;
+        }
+
+        /**
+         * ��ȡthur���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isThur() {
+            return thur;
+        }
+
+        /**
+         * ����thur���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setThur(Boolean value) {
+            this.thur = value;
+        }
+
+        /**
+         * ��ȡfri���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isFri() {
+            return fri;
+        }
+
+        /**
+         * ����fri���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setFri(Boolean value) {
+            this.fri = value;
+        }
+
+        /**
+         * ��ȡsat���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSat() {
+            return sat;
+        }
+
+        /**
+         * ����sat���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSat(Boolean value) {
+            this.sat = value;
+        }
+
+        /**
+         * ��ȡsun���Ե�ֵ��
+         *
+         * @return possible object is
+         * {@link Boolean }
+         */
+        public Boolean isSun() {
+            return sun;
+        }
+
+        /**
+         * ����sun���Ե�ֵ��
+         *
+         * @param value allowed object is
+         *              {@link Boolean }
+         */
+        public void setSun(Boolean value) {
+            this.sun = value;
+        }
+
+    }
+
+}
