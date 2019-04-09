@@ -2,8 +2,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.OTA.config.Config;
-import com.OTA.model.Entity.Hotel;
 import com.example.model.ExampleUser;
 import com.example.model.ExampleUserToy;
 
@@ -27,10 +25,10 @@ public class Example {
 		
 		HashMap<String, Object> whereSQLHotel = new HashMap<String, Object>();
 		whereSQLHotel.put("hotel_id", 5);
-		WhereRelation whereRelation = new WhereRelation();
-		Hotel hotel = DBQuery.instance(Config.pmsDsn).table(Hotel.class).getEntity(whereRelation.where(whereSQLHotel));
+		//WhereRelation whereRelation = new WhereRelation();
+		//Hotel hotel = DBQuery.instance(Config.pmsDsn).table(Hotel.class).getEntity(whereRelation.where(whereSQLHotel));
 		
-		System.out.println(hotel.getHotel_address());
+		//System.out.println(hotel.getHotel_address());
 		
 		String jdbcDsn = "test";
 		
